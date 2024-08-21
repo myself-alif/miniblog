@@ -1,0 +1,114 @@
+/*
+Theme Name: miniBlog
+Author: AL Mahmud Alif
+Author URI: http://http://me-alif.infinityfreeapp.com/
+Description: This theme is based on the miniBlog html template
+Tags: blog
+Version: 1.0
+Text Domain: miniBlog
+*/
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-link span {
+  position: relative;
+  color: #000;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.nav-link span::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  content: "";
+  display: block;
+  border-bottom: 2px solid #000;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.nav-link:hover span::after {
+  transform: scale(1);
+}
+
+.active .nav-link span {
+  font-weight: bold;
+}
+
+.the-social-links:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+.post-content-body img {
+  display: block;
+  width: 100%;
+}
+
+.comment-list li .vcard img {
+  height: 50px;
+}
+
+#cancel-comment-reply-link {
+  color: red;
+  font-size: 16px;
+}
+.comment-notes {
+  display: none;
+}
